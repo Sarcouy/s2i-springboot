@@ -4,7 +4,7 @@ SpringBoot - CentOS Docker image
 All of that is sampled from [Wildfly openshift s2i project](https://github.com/openshift-s2i/s2i-wildfly)
 
 This repository contains the source for building various versions of
-the Tomcat application as a reproducible Docker image using
+springboot applications as a reproducible Docker image using
 [source-to-image](https://github.com/openshift/source-to-image).
 The resulting image can be run using [Docker](http://docker.io).
 
