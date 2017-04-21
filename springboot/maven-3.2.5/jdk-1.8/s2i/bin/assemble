@@ -23,7 +23,7 @@ mkdir -p $LOCAL_SOURCE_DIR
 ARTIFACT_DIR=${ARTIFACT_DIR:-target}
 
 # Resulting JAR files will be deployed to $SPRINGBOOT_HOME/standalone/deployments
-DEPLOY_DIR=$SPRINGBOOT_HOME/webapps
+DEPLOY_DIR=$SPRINGBOOT_HOME
 mkdir -p $DEPLOY_DIR
 
 # Copy the source for compilation
