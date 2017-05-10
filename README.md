@@ -4,7 +4,7 @@ SpringBoot - CentOS Docker image
 All of that is sampled from [Wildfly openshift s2i project](https://github.com/openshift-s2i/s2i-wildfly)
 
 Supported tags and respective `Dockerfile` links for image `sarcouy/s2i-springboot`
-========================================
+---------------
 
 * `jdk6-mvn3.2.5` [(maven-3.2.5/jdk-6)](https://github.com/Sarcouy/s2i-springboot/blob/master/springboot/maven-3.2.5/jdk-1.6/Dockerfile)
 * `jdk6-mvn3.3.9` [(maven-3.3.9/jdk-6)](https://github.com/Sarcouy/s2i-springboot/blob/master/springboot/maven-3.3.9/jdk-1.6/Dockerfile)
