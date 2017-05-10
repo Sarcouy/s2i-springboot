@@ -3,6 +3,18 @@ SpringBoot - CentOS Docker image
 
 All of that is sampled from [Wildfly openshift s2i project](https://github.com/openshift-s2i/s2i-wildfly)
 
+Supported tags and respective `Dockerfile` links
+========================================
+
+* `jdk6-mvn3.2.5` [(maven-3.2.5/jdk-6)](https://github.com/Sarcouy/s2i-springboot/blob/master/springboot/maven-3.2.5/jdk-1.6/Dockerfile)
+* `jdk6-mvn3.3.9` [(maven-3.3.9/jdk-6)](https://github.com/Sarcouy/s2i-springboot/blob/master/springboot/maven-3.3.9/jdk-1.6/Dockerfile)
+* `jdk7-mvn3.2.5` [(maven-3.2.5/jdk-7)](https://github.com/Sarcouy/s2i-springboot/blob/master/springboot/maven-3.2.5/jdk-1.7/Dockerfile)
+* `jdk7-mvn3.3.9` [(maven-3.3.9/jdk-7)](https://github.com/Sarcouy/s2i-springboot/blob/master/springboot/maven-3.3.9/jdk-1.7/Dockerfile)
+* `jdk8-mvn3.2.5` [(maven-3.2.5/jdk-8)](https://github.com/Sarcouy/s2i-springboot/blob/master/springboot/maven-3.2.5/jdk-1.8/Dockerfile)
+* `jdk8-mvn3.3.9` [(maven-3.3.9/jdk-8)](https://github.com/Sarcouy/s2i-springboot/blob/master/springboot/maven-3.3.9/jdk-1.8/Dockerfile)
+* `jdk8-mvn3.5.0` [(maven-3.5.0/jdk-8)](https://github.com/Sarcouy/s2i-springboot/blob/master/springboot/maven-3.5.0/jdk-1.8/Dockerfile)
+
+
 This repository contains the source for building various versions of
 springboot applications as a reproducible Docker image using
 [source-to-image](https://github.com/openshift/source-to-image).
@@ -133,7 +145,7 @@ file inside your source code repository or add -e FOO=BAR to `s2i build -e FOO=B
 
 * JAR_NAME
 
-    Name of the war file to run after maven build `JAR_NAME=myApp.jar`
+    Name of the jar file to run after maven build `JAR_NAME=myApp.jar`
 
 * POM_PATH
 
