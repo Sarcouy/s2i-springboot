@@ -36,13 +36,16 @@ chmod -R g+rw $LOCAL_SOURCE_DIR
 if [ -f "$LOCAL_SOURCE_DIR/$POM_PATH/pom.xml" ]; then
 
   if [ -z "$INCREMENTAL" ]; then
-    export INCREMENTAL=false
+    export INCREMENTAL=true
   fi
 
   if [[ "$INCREMENTAL" = "true" ]]; then 
     # restore any maven dependencies which will be present if this is an
     # incremental build
+    echo "INCREMENTAL is set to $INCREMENTAL, we are restoring cached workspace containing .m2..."
     restore_saved_artifacts
+    echo "...restored"
+
   fi
 
   pushd $LOCAL_SOURCE_DIR/$POM_PATH &> /dev/null
@@ -89,7 +92,9 @@ if [ -f "$LOCAL_SOURCE_DIR/$POM_PATH/pom.xml" ]; then
   mv `find -name $JAR_NAME` $DEPLOY_DIR
 
   if [[ "$INCREMENTAL" = "false" ]]; then
+    echo "INCREMENTAL is set to $INCREMENTAL, we are now cleaning image \"rm -rf . .m2\"..."
     rm -rf . .m2
+    echo "...cleaned up"
   fi
   popd &> /dev/null
 else
@@ -99,7 +104,7 @@ else
 ERR=$?
   if [ $ERR -ne 0 ]; then
     echo "Aborting due to error code $ERR from moving $JAR_NAME file, maybe it doesn't exist "
-    exi $ERR
+    exit $ERR
   fi
 fi
 
