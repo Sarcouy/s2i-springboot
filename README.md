@@ -128,6 +128,7 @@ file inside your source code repository or add -e FOO=BAR to `s2i build -e FOO=B
 
     This is a boolean :
     Set as "true" it avoid removing .m2 in between two builds (but that makes heavier images). Must be used with `s2i build --incremental`,
+    If you don't want an incremental build, and a lighter docker image set `-e INCREMENTAL=false`
     Default to true 
 
 * JAR_NAME
